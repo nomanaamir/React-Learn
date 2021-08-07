@@ -7,19 +7,30 @@ import Header from './components/header/index';
 import Footer from './components/footer/index';
 
 function App() {
-  const [name, setName] = useState(''); // hook
+  const [name, setName] = useState('Test User');
+  const [userId, setId] = useState('Test User');
 
 
   const changeName = () => {
-    setName('Hello world')
+    setName('Hanzalah')
   }
+
+  const changeUser = () => {
+    setId('Adeel')
+  }
+
  
   return (
     <div className="App">
       <Header name={name} />
-      <Footer end='finish' />
+      <Footer userId={userId} />
+
       <button onClick={changeName}>
-        Click me!
+        For Header
+      </button>
+
+      <button onClick={changeUser}>
+        For Footer
       </button>
     </div>
   );
