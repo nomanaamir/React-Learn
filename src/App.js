@@ -1,83 +1,40 @@
 import React, { useState, useEffect } from 'react';
-
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   useParams
+// } from "react-router-dom";
 import './App.css';
+// import firebase from "firebase";
+
+import Signup from './pages/sign-up/sign-up';
+
+
+
 
 // components
-import Card from './components/card/index';
+// import UserPage from './pages/user/index';
+// import HomePage from './pages/home/index';
+
 
 function App() {
+useEffect(()=>{
 
-  const [user, setUser] = useState({
-    name: 'RDJ',
-    avatar: 'https://images.tribuneindia.com/cms/gall_content/2019/4/2019_4$largeimg15_Monday_2019_083425749.jpg',
-    red: 'red',
-    green: 'green',
-    blue: 'blue'
-  })
 
-<<<<<<< Updated upstream
-  const changeName = () => {
-    setName('Hanzalah')
-  }
-
-  const changeUser = () => {
-    setId('Adeel')
-  }
-
- 
+  
+},[])
   return (
     <div className="App">
-      <Header name={name} />
-      <Footer userId={userId} />
+  {/* //     <Router>
+  //       <Route exact path="/" component={HomePage} />
+  //       <Route path="/user/:id" component={UserPage} />
+  //     </Router> */}
 
-      <button onClick={changeName}>
-        For Header
-      </button>
-
-      <button onClick={changeUser}>
-        For Footer
-  const changeState = (obj) => {
-    setUser(
-      obj
-    )
-  }
-  useEffect(() => {
-    setTimeout(() => {
-      setUser(
-        {
-          name: 'Nomam',
-          avatar: 'https://avatars.githubusercontent.com/u/31151920?v=4',
-          red: 'yellow',
-          green: 'purple',
-          blue: 'orange'
-        }
-      )
-    }, 2000);
-  }, []) // lifecycle, triggers when page load
-  return (
-    <div className="App">
-      <Card sendUser={user} />
-
-      <button onClick={() => changeState({
-        name: 'Nomam',
-        avatar: 'https://avatars.githubusercontent.com/u/31151920?v=4',
-        red: 'yellow',
-        green: 'purple',
-        blue: 'orange'
-      })}>
-        View Noman's Profile
-      </button>
-      <button onClick={() => changeState({
-        name: 'RDJ',
-        avatar: 'https://images.tribuneindia.com/cms/gall_content/2019/4/2019_4$largeimg15_Monday_2019_083425749.jpg',
-        red: 'red',
-        green: 'green',
-        blue: 'blue'
-      })}>
-        View RDJ's Profile
-      </button>
-    </div>
+  <Signup/>
+   </div>
   );
 }
+
 
 export default App;
